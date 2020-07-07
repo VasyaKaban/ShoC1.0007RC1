@@ -1,5 +1,6 @@
 #pragma once
 
+#include "dplay8.h"
 #include "net_utils.h"
 #include "net_messages.h"
 

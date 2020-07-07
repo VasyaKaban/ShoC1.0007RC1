@@ -1,6 +1,7 @@
 *.user
 *.opensdf
 *.sdf
-outdir
+*.suo
+output
 *.ipch
 trunk/xr_3da/UpgradeLog.htm
