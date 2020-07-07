@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{f8308c6e-6f01-4344-bca8-98cad8ade579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\Resource Files">
+      <UniqueIdentifier>{6f6bf9fb-f070-4492-87d9-1264a7c25237}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Kernel\Log">
+      <UniqueIdentifier>{f1035778-d5ef-4133-a59d-32fa318880a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\Generic">
+      <UniqueIdentifier>{3790d92f-bcda-4a45-a167-0d270a321a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\CDB">
+      <UniqueIdentifier>{86867af6-5af2-476d-9061-001b99494156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel\Random32">
+      <UniqueIdentifier>{43bf4586-fb6e-47e6-9403-973c8f106b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{dad59f8e-62c1-45cd-bb54-94dcef0a6231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler\quad_tree">
+      <UniqueIdentifier>{78ceb04f-1cab-4915-aa90-64c8f85046a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler\cover_point">
+      <UniqueIdentifier>{fac1b54e-13fe-416f-b8c2-9956a6e2aebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife">
+      <UniqueIdentifier>{e34e8d05-6ab5-4046-a394-51a9a35da6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search">
+      <UniqueIdentifier>{d38ea44f-c42d-42ec-9580-ce6cd5994474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers">
+      <UniqueIdentifier>{210fe71a-86d0-4239-9c9e-727c35e43085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_game">
+      <UniqueIdentifier>{ee1955de-171c-437f-a009-dae6cc9a5da2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_game\path_manager_game_vertex_type">
+      <UniqueIdentifier>{38211d6f-c0d7-402f-8ce9-5e481018ec32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_game\path_manager_game_level">
+      <UniqueIdentifier>{f4b05ea0-e736-4088-807e-3f17b6d59fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_generic">
+      <UniqueIdentifier>{6ae63bc7-df77-45cb-9919-7d9c6735d14e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_level">
+      <UniqueIdentifier>{7c862779-005e-46c7-8e31-2931d41cef07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_level\path_manager_level_evaluator">
+      <UniqueIdentifier>{2c9a528b-2def-4826-b14e-b428100583ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_level\path_manager_level_flooder">
+      <UniqueIdentifier>{8273ee9c-bef9-458a-adbf-1b0dbb6c279c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_level\path_manager_level_straight_line">
+      <UniqueIdentifier>{ae33126d-cf0b-424c-9c58-7221ee696d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\path_managers\path_manager_params">
+      <UniqueIdentifier>{15650cb6-f2b8-491a-b498-8d3df9a730ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\algorithms">
+      <UniqueIdentifier>{47f1e098-3a83-41a5-88b6-a4688d855c10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\algorithms\A%2a">
+      <UniqueIdentifier>{a6b16175-59da-48cf-9a26-66aae647cc91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\algorithms\Dijkstra">
+      <UniqueIdentifier>{780f822a-4769-4b5c-a503-ff981a4ac245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages">
+      <UniqueIdentifier>{6e37925d-da29-4a3d-b30b-37e3ea731b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms">
+      <UniqueIdentifier>{2905d64b-6743-4c5d-befa-2138d2ded109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\priority_queues">
+      <UniqueIdentifier>{42ed99d2-4041-4128-8548-f0f9379d2b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\priority_queues\binary_heap">
+      <UniqueIdentifier>{4f67380f-3268-4d8f-b094-f408c0bf299d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\lists">
+      <UniqueIdentifier>{4df44c5b-48ac-480e-a7ad-5c5cbe5a39ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\lists\bucket_list">
+      <UniqueIdentifier>{2bab5837-bb6b-4392-8aea-f777033091f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\lists\double_linked_list">
+      <UniqueIdentifier>{56549e4f-0c27-46f5-a7ff-0f0e346c4c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\algorithms\lists\single_linked_list">
+      <UniqueIdentifier>{a7e4afff-1071-4a4f-bcd6-fa077e4c9009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\data_storage_constructors">
+      <UniqueIdentifier>{c6bf7431-3610-4798-b326-caf259706a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\data_storage_constructors\builder_allocator">
+      <UniqueIdentifier>{aa30f641-0a0a-4552-8d6f-93f81fba24c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\data_storage_constructors\manager_builder_allocator">
+      <UniqueIdentifier>{f9667071-4551-4682-8d89-8d54f5099550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\path_builders">
+      <UniqueIdentifier>{66350b49-224c-49ff-b378-cffc17fb3c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\path_builders\edge_path">
+      <UniqueIdentifier>{86f53157-14d0-410e-8ea1-bf719a9463fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\path_builders\vertex_path">
+      <UniqueIdentifier>{b0b3671d-28d8-4163-be12-92a721940d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\vertex_allocators">
+      <UniqueIdentifier>{d0e71819-7c63-4fbe-b22d-e95dc9dc8936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\vertex_allocators\fixed">
+      <UniqueIdentifier>{93c217e1-f893-4237-9785-36d8eb4f0fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\vertex_managers">
+      <UniqueIdentifier>{ba4b776d-c17d-4a0e-85b2-0f56a5458744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\vertex_managers\fixed">
+      <UniqueIdentifier>{2c752e7e-eecb-446c-a371-57bf6dfdccf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\data_storages\vertex_managers\hash_fixed">
+      <UniqueIdentifier>{77ee9218-fab9-46fd-8ecf-67fae5b1bf03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs">
+      <UniqueIdentifier>{5cabfe81-1cf8-46c2-9c86-31f6883b392f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\abstract_graph">
+      <UniqueIdentifier>{3af51dad-2f99-4919-b807-9d4f1cf7c37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\abstract_graph\graph_edge">
+      <UniqueIdentifier>{b62f7f2a-4518-4998-9bc3-d7950b10df78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\abstract_graph\graph_vertex">
+      <UniqueIdentifier>{f208b90a-7da1-44dc-8983-6f1e373669c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\cross_table">
+      <UniqueIdentifier>{d66a102a-92e2-4509-9245-6a21adcbbeec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\game_graph">
+      <UniqueIdentifier>{8654b8aa-847f-4937-900c-012cb628b5c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graphs\level_graph">
+      <UniqueIdentifier>{0380afa9-9537-43a9-91ec-1064b16ffc7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\search\graph_engine">
+      <UniqueIdentifier>{da6ab6a9-ef61-4a20-804d-355856f134e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Cross">
+      <UniqueIdentifier>{0337a091-12a6-46b9-9bd4-baf08bb28f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Graph">
+      <UniqueIdentifier>{0ba611e6-7836-4abc-888f-94292fb928a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Merge">
+      <UniqueIdentifier>{e4b7b970-3ead-45f7-a9ab-34c0ae0f9e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared">
+      <UniqueIdentifier>{796fe311-2ce9-4ba9-b3aa-55a85e7cdfab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ALife">
+      <UniqueIdentifier>{d7c9b375-2b9e-4c72-8f7a-97867259827b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ALife\alife_artefact_order">
+      <UniqueIdentifier>{2ebcb91b-3840-4e60-ab52-44fac82a9452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ALife\alife_human_brain">
+      <UniqueIdentifier>{57924b83-85bf-470a-ab86-19258fc49dc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ALife\alife_monster_brain">
+      <UniqueIdentifier>{e8d7effe-0194-44d2-a50b-35bf450f413a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ALife\alife_space">
+      <UniqueIdentifier>{338cc254-53a6-4ab7-8eda-34b8d076c7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ServerEntities">
+      <UniqueIdentifier>{7d24f3e7-ead8-4152-bee6-c49055a6671e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\Server">
+      <UniqueIdentifier>{613203a7-e693-4101-ae73-f540333cd012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\ObjectBroker">
+      <UniqueIdentifier>{32944222-c9f6-406c-a2b9-e4805689345a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\Common">
+      <UniqueIdentifier>{a03c524f-0028-491e-b4d7-200291b46fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\IntrusivePtr">
+      <UniqueIdentifier>{c5c46af4-04c1-4b12-8a7c-d83c75a20b7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Shared\associative_vector">
+      <UniqueIdentifier>{3508c4ee-df91-40c3-bba2-cd05f0e0fc8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn">
+      <UniqueIdentifier>{65b18f9e-d190-47b4-8aea-fb8467a77903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\game_spawn_constructor">
+      <UniqueIdentifier>{837a606b-75c5-4643-b1dd-5efabbc7b469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\level_spawn_constructor">
+      <UniqueIdentifier>{e9d68fe5-eb7d-4912-afe0-9181f2f0bd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\level_spawn_constructor\space_restrictor_wrapper">
+      <UniqueIdentifier>{8d70a03b-e1d7-454e-83a7-c35ed7239201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\server_entity_wrapper">
+      <UniqueIdentifier>{3bc7a519-fc3e-4e2d-8916-60d6186fda84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\patrol_paths">
+      <UniqueIdentifier>{9eb0a457-d5e6-4bda-a4d0-cd66fe048be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\patrol_paths\patrol_path">
+      <UniqueIdentifier>{f32aa386-8467-4ad6-9d35-b7489f8e6375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\patrol_paths\patrol_path_storage">
+      <UniqueIdentifier>{d556565f-d9d3-4130-a22d-4055029bb7c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\patrol_paths\patrol_point">
+      <UniqueIdentifier>{0b3da594-a158-4be0-aa04-4d9ee6f91e3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Spawn\spawn_patcher">
+      <UniqueIdentifier>{afcef570-b9e6-435b-96e5-d530dd94c187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\Verify">
+      <UniqueIdentifier>{d6cb2d8c-c14e-4cf3-9b59-ba28dc8f4446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ALife\guid_generator">
+      <UniqueIdentifier>{94cfd2ad-516b-4461-96b7-131a944a4afb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="communicate.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="factory_api.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegate.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="tga.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="xrAI.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="xrShaderTypes.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="xrThread.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Kernel\Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_log.h">
+      <Filter>Kernel\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="_d3d_extensions.h">
+      <Filter>Kernel\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="FTimer.h">
+      <Filter>Kernel\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Kernel\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="std_classes.h">
+      <Filter>Kernel\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_collector.h">
+      <Filter>Kernel\CDB</Filter>
+    </ClInclude>
+    <ClInclude Include="cl_intersect.h">
+      <Filter>Kernel\CDB</Filter>
+    </ClInclude>
+    <ClInclude Include="xrCDB.h">
+      <Filter>Kernel\CDB</Filter>
+    </ClInclude>
+    <ClInclude Include="random32.h">
+      <Filter>Kernel\Random32</Filter>
+    </ClInclude>
+    <ClInclude Include="AIMapExport.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="ETextureParams.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelGameDef.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="motion_simulator.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader_xrLC.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="xrLevel.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="quadtree.h">
+      <Filter>Compiler\quad_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="quadtree_inline.h">
+      <Filter>Compiler\quad_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="cover_point.h">
+      <Filter>Compiler\cover_point</Filter>
+    </ClInclude>
+    <ClInclude Include="cover_point_inline.h">
+      <Filter>Compiler\cover_point</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager.h">
+      <Filter>ALife\search\path_managers</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game.h">
+      <Filter>ALife\search\path_managers\path_manager_game</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_game</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game_vertex_type.h">
+      <Filter>ALife\search\path_managers\path_manager_game\path_manager_game_vertex_type</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game_vertex_type_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_game\path_manager_game_vertex_type</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game_level.h">
+      <Filter>ALife\search\path_managers\path_manager_game\path_manager_game_level</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_game_level_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_game\path_manager_game_level</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_generic.h">
+      <Filter>ALife\search\path_managers\path_manager_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_generic_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_generic</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level.h">
+      <Filter>ALife\search\path_managers\path_manager_level</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_level</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_evaluator.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_evaluator_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_evaluator</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_flooder.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_flooder</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_flooder_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_flooder</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_straight_line.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_straight_line</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_level_straight_line_inline.h">
+      <Filter>ALife\search\path_managers\path_manager_level\path_manager_level_straight_line</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_params.h">
+      <Filter>ALife\search\path_managers\path_manager_params</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_params_flooder.h">
+      <Filter>ALife\search\path_managers\path_manager_params</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_params_game_level.h">
+      <Filter>ALife\search\path_managers\path_manager_params</Filter>
+    </ClInclude>
+    <ClInclude Include="path_manager_params_straight_line.h">
+      <Filter>ALife\search\path_managers\path_manager_params</Filter>
+    </ClInclude>
+    <ClInclude Include="a_star.h">
+      <Filter>ALife\search\algorithms\A%2a</Filter>
+    </ClInclude>
+    <ClInclude Include="a_star_inline.h">
+      <Filter>ALife\search\algorithms\A%2a</Filter>
+    </ClInclude>
+    <ClInclude Include="dijkstra.h">
+      <Filter>ALife\search\algorithms\Dijkstra</Filter>
+    </ClInclude>
+    <ClInclude Include="dijkstra_inline.h">
+      <Filter>ALife\search\algorithms\Dijkstra</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_binary_heap.h">
+      <Filter>ALife\search\data_storages\algorithms\priority_queues\binary_heap</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_binary_heap_inline.h">
+      <Filter>ALife\search\data_storages\algorithms\priority_queues\binary_heap</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_bucket_list.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\bucket_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_bucket_list_inline.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\bucket_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_double_linked_list.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\double_linked_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_double_linked_list_inline.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\double_linked_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_single_linked_list.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\single_linked_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_single_linked_list_inline.h">
+      <Filter>ALife\search\data_storages\algorithms\lists\single_linked_list</Filter>
+    </ClInclude>
+    <ClInclude Include="data_storage_constructor.h">
+      <Filter>ALife\search\data_storages\data_storage_constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="builder_allocator_constructor.h">
+      <Filter>ALife\search\data_storages\data_storage_constructors\builder_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="builder_allocator_constructor_inline.h">
+      <Filter>ALife\search\data_storages\data_storage_constructors\builder_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="manager_builder_allocator_constructor.h">
+      <Filter>ALife\search\data_storages\data_storage_constructors\manager_builder_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="manager_builder_allocator_constructor_inline.h">
+      <Filter>ALife\search\data_storages\data_storage_constructors\manager_builder_allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_path.h">
+      <Filter>ALife\search\data_storages\path_builders\edge_path</Filter>
+    </ClInclude>
+    <ClInclude Include="edge_path_inline.h">
+      <Filter>ALife\search\data_storages\path_builders\edge_path</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_path.h">
+      <Filter>ALife\search\data_storages\path_builders\vertex_path</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_path_inline.h">
+      <Filter>ALife\search\data_storages\path_builders\vertex_path</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_allocator_fixed.h">
+      <Filter>ALife\search\data_storages\vertex_allocators\fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_allocator_fixed_inline.h">
+      <Filter>ALife\search\data_storages\vertex_allocators\fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_manager_fixed.h">
+      <Filter>ALife\search\data_storages\vertex_managers\fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_manager_fixed_inline.h">
+      <Filter>ALife\search\data_storages\vertex_managers\fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_manager_hash_fixed.h">
+      <Filter>ALife\search\data_storages\vertex_managers\hash_fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_manager_hash_fixed_inline.h">
+      <Filter>ALife\search\data_storages\vertex_managers\hash_fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_abstract.h">
+      <Filter>ALife\search\graphs\abstract_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_abstract_inline.h">
+      <Filter>ALife\search\graphs\abstract_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_edge.h">
+      <Filter>ALife\search\graphs\abstract_graph\graph_edge</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_edge_inline.h">
+      <Filter>ALife\search\graphs\abstract_graph\graph_edge</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_vertex.h">
+      <Filter>ALife\search\graphs\abstract_graph\graph_vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_vertex_inline.h">
+      <Filter>ALife\search\graphs\abstract_graph\graph_vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="game_level_cross_table.h">
+      <Filter>ALife\search\graphs\cross_table</Filter>
+    </ClInclude>
+    <ClInclude Include="game_level_cross_table_inline.h">
+      <Filter>ALife\search\graphs\cross_table</Filter>
+    </ClInclude>
+    <ClInclude Include="game_graph.h">
+      <Filter>ALife\search\graphs\game_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="game_graph_inline.h">
+      <Filter>ALife\search\graphs\game_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="game_graph_space.h">
+      <Filter>ALife\search\graphs\game_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="level_graph.h">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="level_graph_inline.h">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="level_graph_space.h">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="level_graph_vertex_inline.h">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_engine.h">
+      <Filter>ALife\search\graph_engine</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_engine_inline.h">
+      <Filter>ALife\search\graph_engine</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_engine_space.h">
+      <Filter>ALife\search\graph_engine</Filter>
+    </ClInclude>
+    <ClInclude Include="xrCrossTable.h">
+      <Filter>ALife\Cross</Filter>
+    </ClInclude>
+    <ClInclude Include="game_graph_builder.h">
+      <Filter>ALife\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="game_graph_builder_inline.h">
+      <Filter>ALife\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="xr_graph_merge.h">
+      <Filter>ALife\Merge</Filter>
+    </ClInclude>
+    <ClInclude Include="restriction_space.h">
+      <Filter>ALife\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>ALife\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_artefact_order.h">
+      <Filter>ALife\Shared\ALife\alife_artefact_order</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_human_brain.h">
+      <Filter>ALife\Shared\ALife\alife_human_brain</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_human_brain_inline.h">
+      <Filter>ALife\Shared\ALife\alife_human_brain</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_monster_brain.h">
+      <Filter>ALife\Shared\ALife\alife_monster_brain</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_monster_brain_inline.h">
+      <Filter>ALife\Shared\ALife\alife_monster_brain</Filter>
+    </ClInclude>
+    <ClInclude Include="alife_space.h">
+      <Filter>ALife\Shared\ALife\alife_space</Filter>
+    </ClInclude>
+    <ClInclude Include="bone.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="character_info_defs.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="ChooseTypes.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawUtils.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoPortionDefs.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="inventory_space.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemListTypes.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesListHelper.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesListTypes.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="script_export_space.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="script_value_container.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="script_value_container_impl.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeData.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="WaveForm.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrEProps.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Object_Base.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects_Abstract.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects_ALife.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects_ALife_All.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects_ALife_Items.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Objects_ALife_Monsters.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="xrServer_Space.h">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClInclude>
+    <ClInclude Include="client_id.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="game_base_space.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="NET_Compressor.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="NET_utils.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="PHNetState.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="PHSynchronize.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="xrMessages.h">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="object_broker.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_cloner.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_comparer.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_destroyer.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_interfaces.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_loader.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_saver.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="object_type_traits.h">
+      <Filter>ALife\Shared\ObjectBroker</Filter>
+    </ClInclude>
+    <ClInclude Include="clsid_game.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="profiler.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_cast.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_cast_impl0.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_cast_impl1.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_cast_impl2.h">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="intrusive_ptr.h">
+      <Filter>ALife\Shared\IntrusivePtr</Filter>
+    </ClInclude>
+    <ClInclude Include="intrusive_ptr_inline.h">
+      <Filter>ALife\Shared\IntrusivePtr</Filter>
+    </ClInclude>
+    <ClInclude Include="associative_vector.h">
+      <Filter>ALife\Shared\associative_vector</Filter>
+    </ClInclude>
+    <ClInclude Include="associative_vector_compare_predicate.h">
+      <Filter>ALife\Shared\associative_vector</Filter>
+    </ClInclude>
+    <ClInclude Include="associative_vector_compare_predicate_inline.h">
+      <Filter>ALife\Shared\associative_vector</Filter>
+    </ClInclude>
+    <ClInclude Include="associative_vector_inline.h">
+      <Filter>ALife\Shared\associative_vector</Filter>
+    </ClInclude>
+    <ClInclude Include="spawn_constructor_space.h">
+      <Filter>ALife\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="game_spawn_constructor.h">
+      <Filter>ALife\Spawn\game_spawn_constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="game_spawn_constructor_inline.h">
+      <Filter>ALife\Spawn\game_spawn_constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="level_spawn_constructor.h">
+      <Filter>ALife\Spawn\level_spawn_constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="level_spawn_constructor_inline.h">
+      <Filter>ALife\Spawn\level_spawn_constructor</Filter>
+    </ClInclude>
+    <ClInclude Include="space_restrictor_wrapper.h">
+      <Filter>ALife\Spawn\level_spawn_constructor\space_restrictor_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="space_restrictor_wrapper_inline.h">
+      <Filter>ALife\Spawn\level_spawn_constructor\space_restrictor_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="server_entity_wrapper.h">
+      <Filter>ALife\Spawn\server_entity_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="server_entity_wrapper_inline.h">
+      <Filter>ALife\Spawn\server_entity_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_path.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_path_inline.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_path_storage.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path_storage</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_path_storage_inline.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path_storage</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_point.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_point</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol_point_inline.h">
+      <Filter>ALife\Spawn\patrol_paths\patrol_point</Filter>
+    </ClInclude>
+    <ClInclude Include="spawn_patcher.h">
+      <Filter>ALife\Spawn\spawn_patcher</Filter>
+    </ClInclude>
+    <ClInclude Include="guid_generator.h">
+      <Filter>ALife\guid_generator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="tga.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="xrAI.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="xrThread.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="cl_log.cpp">
+      <Filter>Kernel\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="cl_collector.cpp">
+      <Filter>Kernel\CDB</Filter>
+    </ClCompile>
+    <ClCompile Include="random32.cpp">
+      <Filter>Kernel\Random32</Filter>
+    </ClCompile>
+    <ClCompile Include="_buildnodes_view.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_build.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_cover.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_display.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_light.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_link.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_load.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_merge.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_palettize_covers.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_save.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler_smooth.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="motion_simulator.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\xr_3da\xrLoadSurface.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="level_graph.cpp">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="level_graph_vertex.cpp">
+      <Filter>ALife\search\graphs\level_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="xrCrossTable.cpp">
+      <Filter>ALife\Cross</Filter>
+    </ClCompile>
+    <ClCompile Include="game_graph_builder.cpp">
+      <Filter>ALife\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="xr_graph_merge.cpp">
+      <Filter>ALife\Merge</Filter>
+    </ClCompile>
+    <ClCompile Include="alife_artefact_order.cpp">
+      <Filter>ALife\Shared\ALife\alife_artefact_order</Filter>
+    </ClCompile>
+    <ClCompile Include="alife_human_brain.cpp">
+      <Filter>ALife\Shared\ALife\alife_human_brain</Filter>
+    </ClCompile>
+    <ClCompile Include="alife_monster_brain.cpp">
+      <Filter>ALife\Shared\ALife\alife_monster_brain</Filter>
+    </ClCompile>
+    <ClCompile Include="alife_space.cpp">
+      <Filter>ALife\Shared\ALife\alife_space</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Object_Base.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Objects.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Objects_Abstract.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Objects_ALife.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Objects_ALife_Items.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="xrServer_Objects_ALife_Monsters.cpp">
+      <Filter>ALife\Shared\ServerEntities</Filter>
+    </ClCompile>
+    <ClCompile Include="PHNetState.cpp">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="PHSynchronize.cpp">
+      <Filter>ALife\Shared\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="smart_cast.cpp">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="smart_cast_stats.cpp">
+      <Filter>ALife\Shared\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="game_spawn_constructor.cpp">
+      <Filter>ALife\Spawn\game_spawn_constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="level_spawn_constructor.cpp">
+      <Filter>ALife\Spawn\level_spawn_constructor</Filter>
+    </ClCompile>
+    <ClCompile Include="space_restrictor_wrapper.cpp">
+      <Filter>ALife\Spawn\level_spawn_constructor\space_restrictor_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="server_entity_wrapper.cpp">
+      <Filter>ALife\Spawn\server_entity_wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="patrol_path.cpp">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path</Filter>
+    </ClCompile>
+    <ClCompile Include="patrol_path_storage.cpp">
+      <Filter>ALife\Spawn\patrol_paths\patrol_path_storage</Filter>
+    </ClCompile>
+    <ClCompile Include="patrol_point.cpp">
+      <Filter>ALife\Spawn\patrol_paths\patrol_point</Filter>
+    </ClCompile>
+    <ClCompile Include="spawn_patcher.cpp">
+      <Filter>ALife\Spawn\spawn_patcher</Filter>
+    </ClCompile>
+    <ClCompile Include="verify_level_graph.cpp">
+      <Filter>ALife\Verify</Filter>
+    </ClCompile>
+    <ClCompile Include="guid_generator.cpp">
+      <Filter>ALife\guid_generator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Kernel\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
