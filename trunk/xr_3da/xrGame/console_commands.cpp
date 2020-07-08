@@ -1003,7 +1003,7 @@ struct CCC_ClearSmartCastStats : public IConsole_Command {
 };
 #endif
 
-#ifndef MASTER_GOLD
+
 #	include "game_graph.h"
 struct CCC_JumpToLevel : public IConsole_Command {
 	CCC_JumpToLevel(LPCSTR N) : IConsole_Command(N)  {};
@@ -1026,7 +1026,7 @@ struct CCC_JumpToLevel : public IConsole_Command {
 		Msg							("! There is no level \"%s\" in the game graph!",level);
 	}
 };
-#endif // MASTER_GOLD
+
 
 #include "GamePersistent.h"
 
@@ -1397,10 +1397,10 @@ void CCC_RegisterCommands()
 	CMD3(CCC_Mask,				"hud_crosshair",		&psHUD_Flags,	HUD_CROSSHAIR);
 	CMD3(CCC_Mask,				"hud_crosshair_dist",	&psHUD_Flags,	HUD_CROSSHAIR_DIST);
 
-#ifdef DEBUG
+
 	CMD4(CCC_Float,				"hud_fov",				&psHUD_FOV,		0.1f,	1.0f);
 	CMD4(CCC_Float,				"fov",					&g_fov,			5.0f,	180.0f);
-#endif // DEBUG
+
 
 	// Demo
 	CMD1(CCC_DemoPlay,			"demo_play"				);
@@ -1500,10 +1500,10 @@ void CCC_RegisterCommands()
 #endif // DEBUG
 
 
-#ifndef MASTER_GOLD
 	CMD1(CCC_JumpToLevel,	"jump_to_level"		);
 	CMD3(CCC_Mask,			"g_god",			&psActorFlags,	AF_GODMODE	);
 	CMD3(CCC_Mask,			"g_unlimitedammo",	&psActorFlags,	AF_UNLIMITEDAMMO);
+#ifndef MASTER_GOLD
 	CMD1(CCC_Script,		"run_script");
 	CMD1(CCC_ScriptCommand,	"run_string");
 	CMD1(CCC_TimeFactor,	"time_factor");		

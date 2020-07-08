@@ -698,6 +698,7 @@ void CCharacterPhysicsSupport::ActivateShell			( CObject* who )
 	m_eState=esDead;
 	m_flags.set(fl_skeleton_in_shell,TRUE);
 	
+	/*
 	if(IsGameTypeSingle())
 	{
 		m_pPhysicsShell->SetPrefereExactIntegration	();//use exact integration for ragdolls in single
@@ -707,8 +708,15 @@ void CCharacterPhysicsSupport::ActivateShell			( CObject* who )
 	{
 		m_pPhysicsShell->SetIgnoreDynamic();
 	}
+	
 	m_pPhysicsShell->SetIgnoreSmall();
+	*/
+	
+	if (!IsGameTypeSingle())
+		m_pPhysicsShell->SetIgnoreDynamic();
+	
 	//end seting params
+	
 
 
 
