@@ -139,6 +139,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG;AI_COMPILER;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -166,6 +167,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName />
@@ -188,6 +190,7 @@
     </Midl>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -223,6 +226,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateMapFile>false</GenerateMapFile>
@@ -246,6 +250,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -278,6 +283,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
@@ -300,6 +306,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -332,6 +339,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
@@ -354,6 +362,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG;AI_COMPILER;_SECURE_SCL=0;PRIQUEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -381,6 +390,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName />
@@ -403,6 +413,7 @@
     </Midl>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
+	  <AdditionalIncludeDirectories>../xrCore;../xrLua/src;../../SDK/loki;../../SDK/FreeImage;../../SDK/luabind/luabind;../../SDK;../../SDK/Xiph/Include;../../SDK/MagicSoftware/Sdk/Include;../../SDK/dxsdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -438,6 +449,7 @@
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+	  <AdditionalLibraryDirectories>../../../libraries;../../SDK/FreeImage;../../SDK/MagicSoftware/Sdk/Library/ReleaseDLL;../../SDK/dxsdk/lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateMapFile>false</GenerateMapFile>

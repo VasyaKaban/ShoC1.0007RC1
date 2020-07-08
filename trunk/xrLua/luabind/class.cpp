@@ -30,11 +30,12 @@
 #include <cstring>
 //#include <iostream>
 
+#ifndef DEBUG
 void boost::throw_exception	( std::exception const & )
 {
 	abort();
 }
-
+#endif
 
 namespace luabind { namespace detail {
 

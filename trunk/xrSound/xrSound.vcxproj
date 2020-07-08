@@ -96,7 +96,7 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-	  <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalOptions>/NODEFAULTLIB:LIBCMTD %(AdditionalOptions)</AdditionalOptions>
@@ -110,7 +110,7 @@
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)\..\..\output\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-	  <AdditionalLibraryDirectories>..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\output\libraries\;..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,7 +141,7 @@
       <BrowseInformation />
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-	  <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>vorbisfile_static.lib;ogg_static.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -156,7 +156,7 @@
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <ImportLibrary>$(SolutionDir)\..\..\output\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-	  <AdditionalLibraryDirectories>..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\output\libraries\;..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
@@ -184,7 +184,7 @@
       <BrowseInformation />
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-	  <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\SDK\OpenAL\Include;..\..\SDK\eax\Include;..\..\SDK\Xiph\include;..\xrCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>vorbisfile_static.lib;ogg_static.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -195,7 +195,7 @@
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)\..\..\output\libraries\$(ProjectName).lib</ImportLibrary>
       <TargetMachine>NotSet</TargetMachine>
-	  <AdditionalLibraryDirectories>..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\output\libraries\;..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
