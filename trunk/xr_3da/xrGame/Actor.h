@@ -343,6 +343,7 @@ public:
 	CCameraManager&			Cameras				() 	{VERIFY(m_pActorEffector); return *m_pActorEffector;}
 	IC CCameraBase*			cam_Active			()	{return cameras[cam_active];}
 	IC CCameraBase*			cam_FirstEye		()	{return cameras[eacFirstEye];}
+	IC EActorCameras		active_cam			()	{return cam_active;}			// KD: need to know which cam active outside actor methods
 
 protected:
 	void					cam_Set					(EActorCameras style);
@@ -757,6 +758,16 @@ private:
 
 public:
 	virtual bool				register_schedule				() const {return false;}
+	
+	IC u32 get_state() const
+			{
+				return this->mstate_real;
+			}
+
+			IC void set_state(u32 state)
+			{
+				mstate_real = state;
+			}
 };
 
 extern bool		isActorAccelerated			(u32 mstate, bool ZoomMode);

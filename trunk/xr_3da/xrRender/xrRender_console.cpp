@@ -108,6 +108,19 @@ int			ps_r2_wait_sleep			= 0;
 float		ps_r2_lt_smooth				= 1.f;				// 1.f
 float		ps_r2_slight_fade			= 1.f;				// 1.f
 
+Flags32		ps_common_flags				= { 0 };		// r1-only
+int			ps_r__detail_radius			= 49;
+u32			dm_size						= 24;
+u32 		dm_cache1_line				= 12;	//dm_size*2/dm_cache1_count
+u32			dm_cache_line				= 49;	//dm_size+1+dm_size
+u32			dm_cache_size				= 2401;	//dm_cache_line*dm_cache_line
+float		dm_fade						= 47.5;	//float(2*dm_size)-.5f;
+u32			dm_current_size				= 24;
+u32 		dm_current_cache1_line		= 12;	//dm_current_size*2/dm_cache1_count
+u32			dm_current_cache_line		= 49;	//dm_current_size+1+dm_current_size
+u32			dm_current_cache_size		= 2401;	//dm_current_cache_line*dm_current_cache_line
+float		dm_current_fade				= 47.5;	//float(2*dm_current_size)-.5f;
+float		ps_current_detail_density = 0.6;
 
 //- Mad Max
 float		ps_r2_gloss_factor			= 1.0f;
@@ -115,6 +128,30 @@ float		ps_r2_gloss_factor			= 1.0f;
 #ifndef _EDITOR
 #include	"..\xr_ioconsole.h"
 #include	"..\xr_ioc_cmd.h"
+
+// KD
+class CCC_detail_radius		: public CCC_Integer
+{
+public:
+	void	apply	()	{
+		dm_current_size				= iFloor((float)ps_r__detail_radius/4)*2;
+		dm_current_cache1_line		= dm_current_size*2/4;		// assuming cache1_count = 4
+		dm_current_cache_line		= dm_current_size+1+dm_current_size;
+		dm_current_cache_size		= dm_current_cache_line*dm_current_cache_line;
+		dm_current_fade				= float(2*dm_current_size)-.5f;
+	}
+	CCC_detail_radius(LPCSTR N, int* V, int _min=0, int _max=999) : CCC_Integer(N, V, _min, _max)		{ };
+	virtual void Execute	(LPCSTR args)
+	{
+		CCC_Integer::Execute	(args);
+		apply					();
+	}
+	virtual void	Status	(TStatus& S)
+	{	
+		CCC_Integer::Status		(S);
+	}
+};
+// KD
 
 //-----------------------------------------------------------------------
 class CCC_tf_Aniso		: public CCC_Integer
@@ -253,9 +290,10 @@ void		xrRender_initconsole	()
 	CMD4(CCC_Float,		"r__ssa_glod_end",		&ps_r__GLOD_ssa_end,		16,		96		);
 	CMD4(CCC_Float,		"r__wallmark_shift_pp",	&ps_r__WallmarkSHIFT,		0.0f,	1.f		);
 	CMD4(CCC_Float,		"r__wallmark_shift_v",	&ps_r__WallmarkSHIFT_V,		0.0f,	1.f		);
-	CMD4(CCC_Float,		"r__wallmark_ttl",		&ps_r__WallmarkTTL,			1.0f,	5.f*60.f);
 	CMD1(CCC_ModelPoolStat,"stat_models"		);
 #endif // DEBUG
+
+	CMD4(CCC_Float, "r__wallmark_ttl", &ps_r__WallmarkTTL, 1.0f, 5.f*60.f);
 
 //	CMD4(CCC_Integer,	"r__supersample",		&ps_r__Supersample,			1,		4		);
 
@@ -265,7 +303,7 @@ void		xrRender_initconsole	()
 //.	CMD4(CCC_Float,		"r__geometry_lod_pow",	&ps_r__LOD_Power,			0,		2		);
 
 //.	CMD4(CCC_Float,		"r__detail_density",	&ps_r__Detail_density,		.05f,	0.99f	);
-	CMD4(CCC_Float,		"r__detail_density",	&ps_r__Detail_density,		.2f,	0.6f	);
+	CMD4(CCC_Float,		"r__detail_density",	&ps_current_detail_density/*&ps_r__Detail_density*/,		0.04f/*.2f*/,	0.6f	);	// KD: extended from 0.2 to 0.04 and replaced variable
 
 #ifdef DEBUG
 	CMD4(CCC_Float,		"r__detail_l_ambient",	&ps_r__Detail_l_ambient,	.5f,	.95f	);
@@ -383,6 +421,9 @@ void		xrRender_initconsole	()
 
 	tw_min.set			(0,0,0);	tw_max.set	(1,1,1);
 	CMD4(CCC_Vector3,	"r2_aa_weight",			&ps_r2_aa_weight,			tw_min, tw_max	);
+	
+	CMD3(CCC_Mask,			"r__actor_shadow",		&ps_common_flags,			RFLAG_ACTOR_SHADOW	);
+	CMD4(CCC_detail_radius,	"r__detail_radius",		&ps_r__detail_radius,		49,	250	);
 }
 
 void	xrRender_apply_tf		()

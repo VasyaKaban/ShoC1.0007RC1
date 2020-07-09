@@ -272,7 +272,7 @@ void CWallmarksEngine::AddStaticWallmark	(CDB::TRI* pTri, const Fvector* pVerts,
 
 void CWallmarksEngine::AddSkeletonWallmark	(const Fmatrix* xf, CKinematics* obj, ref_shader& sh, const Fvector& start, const Fvector& dir, float size)
 {	
-	if( 0==g_r || ::RImplementation.phase != CRender::PHASE_NORMAL)				return;
+	if(::RImplementation.phase != CRender::PHASE_NORMAL)				return;
 	// optimization cheat: don't allow wallmarks more than 50 m from viewer/actor
 	if (xf->c.distance_to_sqr(Device.vCameraPosition) > _sqr(50.f))				return;
 
@@ -284,7 +284,7 @@ void CWallmarksEngine::AddSkeletonWallmark	(const Fmatrix* xf, CKinematics* obj,
 
 void CWallmarksEngine::AddSkeletonWallmark(intrusive_ptr<CSkeletonWallmark> wm)
 {
-	if(0==g_r || ::RImplementation.phase != CRender::PHASE_NORMAL) return;
+	if(::RImplementation.phase != CRender::PHASE_NORMAL) return;
 
 	if (!::RImplementation.val_bHUD)
 	{
@@ -344,7 +344,7 @@ void CWallmarksEngine::Render()
 	Device.Statistic->RenderDUMP_WMD_Count	= 0;
 	Device.Statistic->RenderDUMP_WMT_Count	= 0;
 
-	float	ssaCLIP				= r_ssaDISCARD/4;
+	//float	ssaCLIP				= r_ssaDISCARD/4;
 
 	lock.Enter		();			// Physics may add wallmarks in parallel with rendering
 
@@ -360,14 +360,14 @@ void CWallmarksEngine::Render()
 				Device.Statistic->RenderDUMP_WMS_Count++;
 				float dst	= Device.vCameraPosition.distance_to_sqr(W->bounds.P);
 				float ssa	= W->bounds.R * W->bounds.R / dst;
-				if (ssa>=ssaCLIP)	{
+				//if (ssa>=ssaCLIP)	{
 					u32 w_count		= u32(w_verts-w_start);
 					if ((w_count+W->verts.size())>=(MAX_TRIS*3)){
 						FlushStream	(hGeom,slot->shader,w_offset,w_verts,w_start,FALSE);
 						BeginStream	(hGeom,w_offset,w_verts,w_start);
 					}
 					static_wm_render	(W,w_verts);
-				}
+				//}
 				W->ttl	-= 0.1f*Device.fTimeDelta;	// visible wallmarks fade much slower
 			} else {
 				W->ttl	-= Device.fTimeDelta;
@@ -402,7 +402,7 @@ void CWallmarksEngine::Render()
 
 			float dst	= Device.vCameraPosition.distance_to_sqr(W->m_Bounds.P);
 			float ssa	= W->m_Bounds.R * W->m_Bounds.R / dst;
-			if (ssa>=ssaCLIP){
+			//if (ssa>=ssaCLIP){
 				Device.Statistic->RenderDUMP_WMD_Count++;
 				u32 w_count		= u32(w_verts-w_start);
 				if ((w_count+W->VCount())>=(MAX_TRIS*3)){
@@ -418,7 +418,7 @@ void CWallmarksEngine::Render()
 					Msg		("! Failed to render dynamic wallmark");
 					w_verts = w_save;
 				}
-			}
+			//}
 			#ifdef	DEBUG
 			 W->used_in_render	= u32(-1);
 			#endif

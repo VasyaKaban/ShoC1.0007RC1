@@ -3,6 +3,42 @@
 #include "../SkeletonAnimated.h"
 class CHudItem;
 
+
+#define BOBBING_SECT "wpn_bobbing_effector"
+
+#define CROUCH_FACTOR	0.75f
+#define SPEED_REMINDER	5.f 
+
+class CWeaponBobbing
+{
+	public:
+		CWeaponBobbing();
+		virtual ~CWeaponBobbing();
+		void Load();
+		void Update(Fmatrix &m);
+		void CheckState();
+
+	private:
+		float	fTime;
+		Fvector	vAngleAmplitude;
+		float	fYAmplitude;
+		float	fSpeed;
+
+		u32		dwMState;
+		float	fReminderFactor;
+		bool	is_limping;
+		bool	m_bZoomMode;
+
+		float	m_fAmplitudeRun;
+		float	m_fAmplitudeWalk;
+		float	m_fAmplitudeLimp;
+
+		float	m_fSpeedRun;
+		float	m_fSpeedWalk;
+		float	m_fSpeedLimp;
+};
+
+
 struct weapon_hud_value: public shared_value
 {
 	CKinematicsAnimated*	m_animations;
@@ -115,12 +151,14 @@ public:
 	static void			CreateSharedContainer	();
 	static void			DestroySharedContainer	();
 	static void			CleanSharedContainer	();
-#ifdef DEBUG
+	
 public:
 	void				dbg_SetFirePoint	(const Fvector &fp)			{((weapon_hud_value*)m_shared_data.get_value())->m_fp_offset.set(fp);}
 	void				dbg_SetFirePoint2	(const Fvector &fp)			{((weapon_hud_value*)m_shared_data.get_value())->m_fp2_offset.set(fp);}
 	void				dbg_SetShellPoint	(const Fvector &sp)			{((weapon_hud_value*)m_shared_data.get_value())->m_sp_offset.set(sp);}
-#endif
+
+private:
+	CWeaponBobbing *m_bobbing;
 };
 
 #define		MAX_ANIM_COUNT							8

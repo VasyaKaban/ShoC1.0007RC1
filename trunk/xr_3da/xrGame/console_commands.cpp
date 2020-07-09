@@ -311,7 +311,7 @@ public:
 	}
 };
 
-#ifndef MASTER_GOLD
+
 class CCC_TimeFactor : public IConsole_Command {
 public:
 					CCC_TimeFactor	(LPCSTR N) : IConsole_Command(N) {}
@@ -322,7 +322,6 @@ public:
 		Device.time_factor	(time_factor);
 	}
 };
-#endif // MASTER_GOLD
 
 //-----------------------------------------------------------------------
 class CCC_DemoRecord : public IConsole_Command
@@ -1506,8 +1505,8 @@ void CCC_RegisterCommands()
 #ifndef MASTER_GOLD
 	CMD1(CCC_Script,		"run_script");
 	CMD1(CCC_ScriptCommand,	"run_string");
-	CMD1(CCC_TimeFactor,	"time_factor");		
 #endif // MASTER_GOLD
+	CMD1(CCC_TimeFactor,	"time_factor");		
 
 	CMD3(CCC_Mask,		"g_autopickup",			&psActorFlags,	AF_AUTOPICKUP);
 
