@@ -77,6 +77,8 @@ CWeapon::CWeapon(LPCSTR name) : m_fLR_MovingFactor(0.f), m_strafe_offset{}
 	m_ef_weapon_type		= u32(-1);
 	m_UIScope				= NULL;
 	m_set_next_ammoType_on_reload = u32(-1);
+	
+	m_nearwall_last_hud_fov = psHUD_FOV_def;
 }
 
 CWeapon::~CWeapon		()
@@ -447,6 +449,16 @@ void CWeapon::Load		(LPCSTR section)
 	m_strafe_offset[2][1].set(bStrafeEnabled_aim, fFullStrafeTime_aim, 0.f); // aim-GL
 	//--#SM+# End--
 	////////////////////////////////////////////
+	
+	m_nearwall_on = READ_IF_EXISTS(pSettings, r_bool, section, "nearwall_on", true);
+	if (m_nearwall_on)
+	{
+		// Параметры изменения HUD FOV когда игрок стоит вплотную к стене
+		m_nearwall_target_hud_fov = READ_IF_EXISTS(pSettings, r_float, section, "nearwall_target_hud_fov", 0.27f);
+		m_nearwall_dist_min = READ_IF_EXISTS(pSettings, r_float, section, "nearwall_dist_min", 0.5f);
+		m_nearwall_dist_max = READ_IF_EXISTS(pSettings, r_float, section, "nearwall_dist_max", 1.f);
+		m_nearwall_speed_mod = READ_IF_EXISTS(pSettings, r_float, section, "nearwall_speed_mod", 10.f);
+	}
 }
 
 void CWeapon::LoadFireParams		(LPCSTR section, LPCSTR prefix)
@@ -699,6 +711,8 @@ void CWeapon::OnH_B_Independent	(bool just_before_destroy)
 	SetHUDmode					(FALSE);
 	m_bZoomMode					= false;
 	UpdateXForm					();
+	
+	m_nearwall_last_hud_fov = psHUD_FOV_def;
 
 }
 
@@ -742,6 +756,8 @@ void CWeapon::OnH_B_Chield		()
 
 	OnZoomOut					();
 	m_set_next_ammoType_on_reload	= u32(-1);
+	
+	m_nearwall_last_hud_fov = psHUD_FOV_def;
 }
 
 
@@ -1718,4 +1734,33 @@ const float &CWeapon::hit_probability	() const
 {
 	VERIFY					((g_SingleGameDifficulty >= egdNovice) && (g_SingleGameDifficulty <= egdMaster)); 
 	return					(m_hit_probability[egdNovice]);
+}
+
+// Получить HUD FOV от текущего оружия игрока
+float CWeapon::GetHudFov()
+{
+	// Рассчитываем HUD FOV от бедра (с учётом упирания в стены)
+	if (m_nearwall_on && ParentIsActor() && Level().CurrentViewEntity() == H_Parent())
+	{
+		// Получаем расстояние от камеры до точки в прицеле
+		collide::rq_result& RQ = HUD().GetCurrentRayQuery();
+		float dist = RQ.range;
+
+		// Интерполируем расстояние в диапазон от 0 (min) до 1 (max)
+		clamp(dist, m_nearwall_dist_min, m_nearwall_dist_max);
+		float fDistanceMod = ((dist - m_nearwall_dist_min) / (m_nearwall_dist_max - m_nearwall_dist_min)); // 0.f ... 1.f
+
+		 // Рассчитываем базовый HUD FOV от бедра
+		float fBaseFov = psHUD_FOV_def;
+		clamp(fBaseFov, 0.0f, FLT_MAX);
+
+		// Плавно высчитываем итоговый FOV от бедра
+		float src = m_nearwall_speed_mod * Device.fTimeDelta;
+		clamp(src, 0.f, 1.f);
+
+		float fTrgFov = m_nearwall_target_hud_fov + fDistanceMod * (fBaseFov - m_nearwall_target_hud_fov);
+		m_nearwall_last_hud_fov = m_nearwall_last_hud_fov * (1 - src) + fTrgFov * src;
+	}
+
+	return m_nearwall_last_hud_fov;
 }
