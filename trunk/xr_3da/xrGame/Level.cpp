@@ -1036,15 +1036,6 @@ bool	IsGameTypeSingle()
 	return g_pGamePersistent->GameType()==GAME_SINGLE || g_pGamePersistent->GameType()==GAME_ANY;
 }
 
-#ifdef BATTLEYE
-
-bool CLevel::TestLoadBEClient()
-{
-	return battleye_system.TestLoadClient();
-}
-
-#endif // BATTLEYE
-
 GlobalFeelTouch::GlobalFeelTouch()
 {
 }

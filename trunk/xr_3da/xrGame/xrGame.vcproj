@@ -14990,14 +14990,6 @@
 			<Filter
 				Name="Client"
 				>
-				<File
-					RelativePath=".\xr_Client_BattlEye.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\xr_Client_BattlEye.h"
-					>
-				</File>
 				<Filter
 					Name="Cameras"
 					>
@@ -22714,26 +22706,6 @@
 			<Filter
 				Name="Server"
 				>
-				<File
-					RelativePath=".\battleye.h"
-					>
-				</File>
-				<File
-					RelativePath=".\battleye_system.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\battleye_system.h"
-					>
-				</File>
-				<File
-					RelativePath=".\xr_Server_BattlEye.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\xr_Server_BattlEye.h"
-					>
-				</File>
 				<File
 					RelativePath=".\xrServer.cpp"
 					>
