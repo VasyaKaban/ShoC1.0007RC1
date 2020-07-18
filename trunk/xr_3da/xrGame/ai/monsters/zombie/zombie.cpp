@@ -5,6 +5,8 @@
 #include "../../../../skeletonanimated.h"
 #include "../../../entitycondition.h"
 #include "../monster_velocity_space.h"
+#include "../../../characterphysicssupport.h"
+#include "../../../PHMovementControl.h"
 
 #include "../control_animation_base.h"
 #include "../control_movement_base.h"
@@ -153,6 +155,8 @@ void	CZombie::Hit								(SHit* pHDS)
 				active_triple_idx			= u8(Random.randI(FAKE_DEATH_TYPES_COUNT));
 				com_man().ta_activate		(anim_triple_death[active_triple_idx]);
 				move().stop					();
+				if (g_Alive())
+					character_physics_support()->movement()->DestroyCharacter();
 				time_dead_start				= Device.dwTimeGlobal;
 				
 				if (fake_death_left == 0)	fake_death_left = 1;
@@ -173,7 +177,9 @@ void CZombie::shedule_Update(u32 dt)
 		if (time_dead_start + TIME_FAKE_DEATH < Device.dwTimeGlobal) {
 			time_dead_start  = 0;
 
-			com_man().ta_pointbreak();	
+			com_man().ta_pointbreak();
+			if (g_Alive())	
+				character_physics_support()->CreateCharacter();		
 
 			time_resurrect = Device.dwTimeGlobal;
 		}
@@ -187,6 +193,8 @@ bool CZombie::fake_death_fall_down()
 
 	com_man().ta_activate		(anim_triple_death[u8(Random.randI(FAKE_DEATH_TYPES_COUNT))]);
 	move().stop					();
+	if (g_Alive())
+		character_physics_support()->movement()->DestroyCharacter();
 
 	return true;
 }
@@ -204,6 +212,9 @@ void CZombie::fake_death_stand_up()
 	if (!active) return;
 	
 	com_man().ta_pointbreak();
+	
+	if (g_Alive())
+		character_physics_support()->CreateCharacter();
 }
 
 

@@ -93,20 +93,9 @@ CActor::CActor() : CEntityAlive()
 	cameras[eacFirstEye]	= xr_new<CCameraFirstEye>				(this);
 	cameras[eacFirstEye]->Load("actor_firsteye_cam");
 
-	if(strstr(Core.Params,"-psp"))
-		psActorFlags.set(AF_PSP, TRUE);
-	else
-		psActorFlags.set(AF_PSP, FALSE);
-
-	if( psActorFlags.test(AF_PSP) )
-	{
 		cameras[eacLookAt]		= xr_new<CCameraLook2>				(this);
 		cameras[eacLookAt]->Load("actor_look_cam_psp");
-	}else
-	{
-		cameras[eacLookAt]		= xr_new<CCameraLook>				(this);
-		cameras[eacLookAt]->Load("actor_look_cam");
-	}
+
 	cameras[eacFreeLook]	= xr_new<CCameraLook>					(this);
 	cameras[eacFreeLook]->Load("actor_free_cam");
 
@@ -370,10 +359,7 @@ if(!g_dedicated_server)
 		m_BloodSnd.create		(pSettings->r_string(section,"heavy_blood_snd"), st_Effect,SOUND_TYPE_MONSTER_INJURING);
 	}
 }
-	if( psActorFlags.test(AF_PSP) )
-		cam_Set					(eacLookAt);
-	else
-		cam_Set					(eacFirstEye);
+		cam_Set					(cam_active);
 
 	// sheduler
 	shedule.t_min				= shedule.t_max = 1;
@@ -846,9 +832,9 @@ float CActor::currentFOV()
 {
 	CWeapon* pWeapon = smart_cast<CWeapon*>(inventory().ActiveItem());	
 
-	if (eacFirstEye == cam_active && pWeapon &&
+	if (eacFreeLook != cam_active && pWeapon &&
 		pWeapon->IsZoomed() && (!pWeapon->ZoomTexture() ||
-		(!pWeapon->IsRotatingToZoom() && pWeapon->ZoomTexture())))
+		(!pWeapon->IsRotatingToZoom() && pWeapon->ZoomTexture() && eacFirstEye == cam_active) || (pWeapon->ZoomTexture() && eacLookAt == cam_active)))
 		return pWeapon->GetZoomFactor() * (0.75f);
 	else
 		return g_fov;
@@ -895,29 +881,35 @@ void CActor::UpdateCL	()
 		psHUD_Flags.set( HUD_CROSSHAIR_RT2, true );
 		psHUD_Flags.set( HUD_DRAW_RT, true );
 	}
-	if(pWeapon )
+	if (pWeapon)
 	{
-		if(pWeapon->IsZoomed())
+		if (pWeapon->IsZoomed())
 		{
 			float full_fire_disp = pWeapon->GetFireDispersion(true);
 
 			CEffectorZoomInertion* S = smart_cast<CEffectorZoomInertion*>	(Cameras().GetCamEffector(eCEZoom));
-			if(S) S->SetParams(full_fire_disp);
+			if (S) S->SetParams(full_fire_disp);
 
 			m_bZoomAimingMode = true;
 		}
 
-		if(Level().CurrentEntity() && this->ID()==Level().CurrentEntity()->ID() )
+		if (Level().CurrentEntity() && this->ID() == Level().CurrentEntity()->ID())
 		{
 			float fire_disp_full = pWeapon->GetFireDispersion(true);
 
 			HUD().SetCrosshairDisp(fire_disp_full, 0.02f);
 			HUD().ShowCrosshair(pWeapon->use_crosshair());
 
-			psHUD_Flags.set( HUD_CROSSHAIR_RT2, pWeapon->show_crosshair() );
-			psHUD_Flags.set( HUD_DRAW_RT,		pWeapon->show_indicators() );
-		}
+			if (eacLookAt == cam_active) {
+				psHUD_Flags.set(HUD_CROSSHAIR_RT2, true);
+				psHUD_Flags.set(HUD_DRAW_RT, true);
+			}
+			else {
+				psHUD_Flags.set(HUD_CROSSHAIR_RT2, pWeapon->show_crosshair());
+				psHUD_Flags.set(HUD_DRAW_RT, pWeapon->show_indicators());
+			}
 
+		}
 	}
 	else
 	{
