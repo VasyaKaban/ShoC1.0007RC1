@@ -27,11 +27,11 @@ void	CCar::cam_Update			(float dt, float fov)
 	Fvector							P,Da;
 	Da.set							(0,0,0);
 	//bool							owner = !!Owner();
-
+	
 	XFORM().transform_tiny			(P,m_camera_position);
 
 	switch(active_camera->tag) {
-	case ectFirst:
+	case ectFirst:	
 		// rotate head
 		if(OwnerActor()) OwnerActor()->Orientation().yaw	= -active_camera->yaw;
 		if(OwnerActor()) OwnerActor()->Orientation().pitch	= -active_camera->pitch;

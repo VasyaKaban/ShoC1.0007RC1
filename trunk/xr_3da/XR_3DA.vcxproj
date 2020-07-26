@@ -191,7 +191,8 @@
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
       <ImportLibrary>$(SolutionDir)\..\..\output\libraries\$(ProjectName).lib</ImportLibrary>
-      <AdditionalLibraryDirectories>..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX;..\..\SDK\dxsdk\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\output\libraries\;..\..\SDK\Xiph\Libs;..\..\SDK\OpenAL\libs;..\..\SDK\EAX;..\..\SDK\dxsdk\lib\x86</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">

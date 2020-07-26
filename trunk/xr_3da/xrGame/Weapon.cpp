@@ -443,7 +443,7 @@ void CWeapon::Load		(LPCSTR section)
 	float fFullStrafeTime     = READ_IF_EXISTS(pSettings, r_float, section, "strafe_transition_time", 0.25f);
 	float fFullStrafeTime_aim = READ_IF_EXISTS(pSettings, r_float, section, "strafe_aim_transition_time", 0.15f);
 	bool bStrafeEnabled       = READ_IF_EXISTS(pSettings, r_bool, section, "strafe_enabled", true);
-	bool bStrafeEnabled_aim   = READ_IF_EXISTS(pSettings, r_bool, section, "strafe_aim_enabled", false);
+	bool bStrafeEnabled_aim   = READ_IF_EXISTS(pSettings, r_bool, section, "strafe_aim_enabled", true);
 
 	m_strafe_offset[2][0].set(bStrafeEnabled, fFullStrafeTime, 0.f); // normal
 	m_strafe_offset[2][1].set(bStrafeEnabled_aim, fFullStrafeTime_aim, 0.f); // aim-GL

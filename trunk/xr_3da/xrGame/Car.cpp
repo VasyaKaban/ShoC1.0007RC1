@@ -426,6 +426,12 @@ void CCar::UpdateCL				( )
 		m_car_weapon->UpdateCL();
 		if(m_memory)
 			m_memory->set_camera(m_car_weapon->ViewCameraPos(), m_car_weapon->ViewCameraDir(), m_car_weapon->ViewCameraNorm());
+	    if (OwnerActor() && HasWeapon() && m_car_weapon->IsActive())
+		{
+			collide::rq_result& rq = HUD().GetCurrentRayQuery();
+			CCameraBase* C	= active_camera;
+			m_car_weapon->SetParam(CCarWeapon::eWpnDesiredPos, C->vPosition.add(C->vDirection.mul(rq.range)));
+		}
 	}
 	ASCUpdate			();
 	if(Owner()) return;
@@ -608,9 +614,8 @@ void CCar::detach_Actor()
 	ResetKeys();
 	m_current_rpm=m_min_rpm;
 	HUD().GetUI()->UIMainIngameWnd->CarPanel().Show(false);
-	///Break();
-	//H_SetParent(NULL);
 	HandBreak();
+	if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0);
 	processing_deactivate();
 #ifdef DEBUG
 	DBgClearPlots();
@@ -839,6 +844,8 @@ void CCar::CreateSkeleton(CSE_Abstract	*po)
 	m_pPhysicsShell->Activate(true);
 	m_pPhysicsShell->SetAirResistance(0.f,0.f);
 	m_pPhysicsShell->SetPrefereExactIntegration();
+	
+	m_pPhysicsShell->Enable();
 
 	ApplySpawnIniToPhysicShell(&po->spawn_ini(),m_pPhysicsShell,false);
 	ApplySpawnIniToPhysicShell(smart_cast<CKinematics*>(Visual())->LL_UserData(),m_pPhysicsShell,false);

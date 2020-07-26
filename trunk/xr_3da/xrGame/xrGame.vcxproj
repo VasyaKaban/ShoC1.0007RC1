@@ -116,7 +116,6 @@
     <OutDir>$(SolutionDir)\..\..\output\binaries\</OutDir>
     <IntDir>$(SolutionDir)\..\..\output\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>E:\ShocGit\ShoC1.0007RC1\SDK\DXSDK\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">
     <OutDir>$(SolutionDir)\..\..\output\binaries\</OutDir>

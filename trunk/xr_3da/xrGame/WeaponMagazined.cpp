@@ -161,9 +161,9 @@ void CWeaponMagazined::FireEnd()
 {
 	inherited::FireEnd();
 
-	CActor	*actor = smart_cast<CActor*>(H_Parent());
+	/*CActor	*actor = smart_cast<CActor*>(H_Parent());
 	if(!iAmmoElapsed && actor && GetState()!=eReload) 
-		Reload();
+		Reload();*/
 }
 
 void CWeaponMagazined::Reload() 
@@ -638,6 +638,12 @@ void CWeaponMagazined::switch2_Fire	()
 }
 void CWeaponMagazined::switch2_Empty()
 {
+	if (smart_cast<CActor*>(H_Parent()) != NULL)
+    {
+        OnEmptyClick();
+        return;
+    }
+	
 	OnZoomOut();
 	
 	if(!TryReload())
@@ -666,6 +672,8 @@ void CWeaponMagazined::switch2_Hiding()
 {
 	CWeapon::FireEnd();
 	
+	HUD_SOUND::StopSound(sndReload);
+	
 	PlaySound	(sndHide,get_LastFP());
 
 	PlayAnimHide();
@@ -675,6 +683,8 @@ void CWeaponMagazined::switch2_Hiding()
 void CWeaponMagazined::switch2_Hidden()
 {
 	CWeapon::FireEnd();
+	
+	HUD_SOUND::StopSound(sndReload);
 
 	if (m_pHUD) m_pHUD->StopCurrentAnimWithoutCallback();
 

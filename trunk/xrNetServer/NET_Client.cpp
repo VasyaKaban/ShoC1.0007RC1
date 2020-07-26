@@ -244,10 +244,9 @@ void  IPureClient::_Recieve( const void* data, u32 data_size, u32 /*param*/ )
 {
     MSYS_PING*    cfg = (MSYS_PING*)data;
 
-	if(     (data_size>2*sizeof(u32)) 
-	    &&  (cfg->sign1==0x12071980) 
-	    &&  (cfg->sign2==0x26111975)
-	  )
+	if ((data_size >= sizeof(MSYS_CONFIG))
+        && (cfg->sign1 == 0x12071980)
+        && (cfg->sign2 == 0x26111975))
 	{
 		// Internal system message
 		if( (data_size == sizeof(MSYS_PING)) )
@@ -264,7 +263,6 @@ void  IPureClient::_Recieve( const void* data, u32 data_size, u32 /*param*/ )
 		
 		if ( data_size == sizeof(MSYS_CONFIG) )
 		{
-			MSYS_CONFIG* msys_cfg = (MSYS_CONFIG*)data;
 			net_Connected = EnmConnectionCompleted;
 			return;
 		}
