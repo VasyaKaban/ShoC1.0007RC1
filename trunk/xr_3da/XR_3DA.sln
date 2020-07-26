@@ -56,8 +56,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrGameSpy", "xrGame\xrGameS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrStatisticConvert", "xrStatisticConvert\xrStatisticConvert.vcxproj", "{2EA2CBBA-16BD-4B97-80B3-3F824CFBD4F1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xrLUA", "..\xrLua\xrLua.vcxproj", "{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openal32", "..\xrOpenAL\OpenAL-Windows\Router\Router.vcxproj", "{566551F4-4EF1-4CB4-A131-F982E7606907}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BugTrap", "..\BugTrap\BugTrap.vcxproj", "{E8CF1ADA-264A-4127-86C2-FD7057D3792C}"
@@ -425,21 +423,6 @@ Global
 		{2EA2CBBA-16BD-4B97-80B3-3F824CFBD4F1}.Release_Priquel|Win32.Build.0 = Release|Win32
 		{2EA2CBBA-16BD-4B97-80B3-3F824CFBD4F1}.Release|Win32.ActiveCfg = Release|Win32
 		{2EA2CBBA-16BD-4B97-80B3-3F824CFBD4F1}.Release|Win32.Build.0 = Release|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Debug_Dedicated|Win32.ActiveCfg = Debug|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Debug_Priquel|Win32.ActiveCfg = Debug|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Debug_Priquel|Win32.Build.0 = Debug|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Debug|Win32.Build.0 = Debug|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Mixed_Dedicated|Win32.ActiveCfg = Mixed|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Mixed_Priquel|Win32.ActiveCfg = Mixed|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Mixed_Priquel|Win32.Build.0 = Mixed|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Mixed|Win32.ActiveCfg = Mixed|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Mixed|Win32.Build.0 = Mixed|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Release_Dedicated|Win32.ActiveCfg = Release|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Release_Priquel|Win32.ActiveCfg = Release|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Release_Priquel|Win32.Build.0 = Release|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Release|Win32.ActiveCfg = Release|Win32
-		{9ACE5473-6D68-4B96-AC42-B39EABA0FE1F}.Release|Win32.Build.0 = Release|Win32
 		{566551F4-4EF1-4CB4-A131-F982E7606907}.Debug_Dedicated|Win32.ActiveCfg = Debug|Win32
 		{566551F4-4EF1-4CB4-A131-F982E7606907}.Debug_Priquel|Win32.ActiveCfg = Debug|Win32
 		{566551F4-4EF1-4CB4-A131-F982E7606907}.Debug_Priquel|Win32.Build.0 = Debug|Win32
